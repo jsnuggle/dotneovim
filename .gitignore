@@ -1,0 +1,9 @@
+# lazy.nvim auto-installs plugins under stdpath('data'), not in this repo,
+# so we generally have nothing to ignore. Keep this anyway in case
+# something gets shadowed locally.
+spell/
+.luarc.json
+.luarc.jsonc
+
+# OS
+.DS_Store
