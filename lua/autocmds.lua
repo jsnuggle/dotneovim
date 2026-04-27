@@ -44,13 +44,11 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
--- Wrap and format prose at 78 chars
+-- Spell-check prose filetypes (hard wrap removed)
 vim.api.nvim_create_autocmd('FileType', {
   group = aug 'prose_wrap',
   pattern = { 'markdown', 'gitcommit', 'mail', 'text' },
   callback = function()
-    vim.bo.textwidth = 78
-    vim.opt_local.formatoptions:append 't'
     vim.wo.spell = true
   end,
 })
